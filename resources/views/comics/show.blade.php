@@ -5,43 +5,51 @@
 <div id="show" class="container bg-white">
     
     <div class="row mt">
+        {{-- IMAGE SINGLE SPECIFIC COMIC --}}
         <img class="image-position img-fluid" src="{{$comic['thumb']}}" alt="">
         <h2>{{$comic->title}}</h2>
         <div class="text-center mt-3">
             <h5>{{$comic->description}}</h5>
         </div>
         <hr>
-        <h3 class="mt">Info</h3>
-        <div class="d-flex justify-content-between">
-                        <div>
-                            <h4>Artists:</h4>
-                            <i>{{$comic->artists}}</i>
-                        </div>
-                        <div>
-                            <h4>Writers:</h4>
-                            <i>{{$comic->writers}}</i>
-                        </div>
-                    <div>
-                            <h4>Type:</h4>
-                            <i>{{$comic->type}}</i>
-                    </div>
-                <div class="mt">
-                            <h4>Price:</h4>
-                            <i>${{$comic->price}}</i>
+        {{-- INFO COMICS --}}
+        <h3 class="text-center mb-5">INFO</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-3">
+                    <h4>Artists:</h4>
+                    {{$comic->artists}}
                 </div>
-                <div class="mt">
-                            <h4>Sale Date:</h4>
-                            <i>${{$comic->sale_date}}</i>
+                <div class="col-3">
+                    <h4>Writers:</h4>
+                    {{$comic->writers}}
                 </div>
+                <div class="col-2">
+                    <h4>Type:</h4>
+                    {{$comic->type}}
+                </div>
+                <div class="col-2">
+                    <h4>Price:</h4>
+                    {{$comic->price}}
+                </div>
+                <div class="col-2">
+                    <h4>Sale Date:</h4>
+                    {{$comic->sale_date}}
+                </div>
+            </div>
         </div>
     </div>
 
 
-    <div class="m-2 d-flex justify-content-center gap-2">
+    <div class="my-5 d-flex justify-content-center gap-2">
+        {{-- BUTTON EDIT --}}
         <a href="{{route('comics.edit', $comic)}}" class="btn btn-warning" >Modifica</a>
         <form action="{{route('comics.destroy', $comic->id)}}" id="delete-form" method="POST">
             @method('DELETE')
             @csrf
+            {{-- BUTTON DESTROY --}}
         <button class="btn btn-danger">Elimina</button></form>
        
     </div>
