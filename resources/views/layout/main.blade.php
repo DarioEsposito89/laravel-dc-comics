@@ -15,7 +15,7 @@
 </head>
 <body>
 @include('includes.header')
-   <main class="container">
+   <main>
     @yield('main-content')
     @include('includes.infoLinks')
    </main>
