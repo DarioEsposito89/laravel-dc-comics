@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,39 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('homepage');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
+Route::post('/comics',[ComicController::class, 'store'])->name('comics.store');
+Route::get('/comics/{comic}/edit',[ComicController::class, 'edit'])->name('comics.edit');
+Route::put('/comics/{comic}',[ComicController::class, 'update'])->name('comics.update');
+Route::delete('/comics/{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');
+
+
+
+
+
+
+Route::get('/characters', function () {
+    return view('characters');
+})->name('characters');
+
+
+Route::get('/movies', function () {
+    return view('movies');
+})->name('movies');
+
+Route::get('/tv', function () {
+    return view('tv');
+})->name('tv');
+
+Route::get('/games', function () {
+    return view('games');
+})->name('games');
+
+Route::get('/collections', function () {
+    return view('collections');
+})->name('collections');
