@@ -1,7 +1,11 @@
 @import "bootstrap";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "variables";
+
 
 @import "header";
 @import "main";
-@import "footer";
+@import "infoLinks";
+@import "footerMain";
+@import "footerBottom";
 @import "show";

@@ -1,0 +1,17 @@
+.bg-blu {
+    height: 80px;
+    background-color: #1382f9;
+    margin-bottom: 50px;
+}
+
+#show {
+    position: relative;
+    width: 1000px;
+    .image-position {
+        height: 300px;
+        width: 200px;
+        position: absolute;
+        top: -350px;
+        left: 200px;
+    }
+}
