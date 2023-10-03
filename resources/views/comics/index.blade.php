@@ -10,6 +10,7 @@
 <div class="content">
     <div class="btn-series">Current series</div>
     <div  class="cards-comics">
+        {{-- Cycle that prints comic cards --}}
         @foreach ($comics as $comic)
         <a href="{{ route('comics.show', $comic->id)}}">
             <div class="card img-fluid">
@@ -23,6 +24,7 @@
 
     <div class="d-flex gap-3">
         <div>
+            {{-- BUTTON CREATE --}}
             <a class="btn btn-primary" href="{{route('comics.create', $comic)}}">Crea comic</a>
         </div>
         <div class="btn btn-primary">
