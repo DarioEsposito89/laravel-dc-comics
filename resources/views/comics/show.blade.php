@@ -17,27 +17,25 @@
 
     <div class="container">
         <div class="row">
-            <div class="row">
-                <div class="col-3">
-                    <h4>Artists:</h4>
-                    {{$comic->artists}}
-                </div>
-                <div class="col-3">
-                    <h4>Writers:</h4>
-                    {{$comic->writers}}
-                </div>
-                <div class="col-2">
-                    <h4>Type:</h4>
-                    {{$comic->type}}
-                </div>
-                <div class="col-2">
-                    <h4>Price:</h4>
-                    {{$comic->price}}
-                </div>
-                <div class="col-2">
-                    <h4>Sale Date:</h4>
-                    {{$comic->sale_date}}
-                </div>
+            <div class="col-3">
+                <h4>Artists:</h4>
+                {{$comic->artists}}
+            </div>
+            <div class="col-3">
+                <h4>Writers:</h4>
+                {{$comic->writers}}
+            </div>
+            <div class="col-2">
+                <h4>Type:</h4>
+                {{$comic->type}}
+            </div>
+            <div class="col-2">
+                <h4>Price:</h4>
+                {{$comic->price}}
+            </div>
+            <div class="col-2">
+                <h4>Sale Date:</h4>
+                {{$comic->sale_date}}
             </div>
         </div>
     </div>
