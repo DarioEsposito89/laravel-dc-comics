@@ -15,10 +15,11 @@
 </head>
 <body>
 @include('includes.header')
-   <main>
+  <main>
     @yield('main-content')
-    @include('includes.infoLinks')
-   </main>
+  </main>
+  
+  @include('includes.infoLinks')
 
   @include('includes.footerMain')
   @include('includes.footerBottom')
